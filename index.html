@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        h1 {margin-bottom: 30px;}
+        label {font-weight: bold;}
+        input, select {margin-bottom: 10px;}
+        form {width: 30%; padding: 20px; background-color: hsl(175, 80%, 94%); border: solid 2px hsl(175, 80%, 54%); border-radius: 1em;}
+        small{color: red; font-style: italic; margin-top: 0;}
+    </style>
+</head>
+<body class="mt-2 ml-4">
+    <h1>Employee Management System</h1>
+    <form id="empForm">
+        <div class="mb-3">
+            <label for="idUser" class="form-label">8-Digit Employee ID</label>
+            <input type="text" class="form-control" id="idUser"  value="" placeholder="Max 8 characters" required>
+            <small id="warnMsg-id"></small>
+        </div>
+
+        <div class="mb-3">
+            <label for="nameUser" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="nameUser" value="" required>            
+        </div>
+
+        <div class="mb-3">
+            <label for="extUser" class="form-label">4-Digit Extension</label>
+            <input type="text" class="form-control" id="extUser" value="" placeholder="Max 4 characters" required>
+            <small id="warnMsg-ext"></small>            
+        </div>
+
+        <div class="mb-3">
+            <label for="emailUser" class="form-label">Email</label>
+            <!-- <input type="email" class="form-control" id="emailUser"  value="" required aria-describedby="emailHelp"> -->
+            <input type="email" class="form-control" id="emailUser"  value="" aria-describedby="emailUser" required>
+            
+        </div>             
+        <div class="mb-3">
+            <!-- <label for="validationDefault05" class="form-label">Department</label> -->
+            <label for="department" class="form-label">Department</label>
+            <br>
+            <select class="form-select form-select-lg mb-3" aria-label="Large select example" id="department">
+                <option selected>Open this select menu</option>
+                <option value="Administrative">Administrative</option>
+                <option value="Engineering">Engineering</option>
+                <option value="Executive">Executive</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Quality Assurance">Quality Assurance</option>
+                <option value="Sales">Sales</option>
+            </select>
+        </div>
+          
+        
+        <button type="submit" class="btn btn-primary" id="myButton">Add Employee</button>
+     
+    </form>
+    
+
+    <!-- <button id="myButton">Click Me</button> -->
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
+
